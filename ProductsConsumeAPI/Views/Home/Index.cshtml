@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Product
+
+<div class="text-center">
+    <table class="table table-striped">
+        <thead class="thead-dark text-light">
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.ProductName)</th>
+           
+                <th>@Html.DisplayNameFor(model => model.SupplierId)</th>
+           
+                <th>@Html.DisplayNameFor(model => model.CategoryId)</th>
+          
+                <th>@Html.DisplayNameFor(model => model.QuantityPerUnit)</th>
+           
+                <th>@Html.DisplayNameFor(model => model.UnitPrice)</th>
+            
+                <th>@Html.DisplayNameFor(model => model.UnitsInStock)</th>
+            
+                <th>@Html.DisplayNameFor(model => model.UnitsOnOrder)</th>
+           
+                <th>@Html.DisplayNameFor(model => model.ReorderLevel)</th>
+           
+                <th>@Html.DisplayNameFor(model => model.Discontinued)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.ProductName</td>
+          
+                <td>@Model.SupplierId</td>
+            
+                <td>@Model.CategoryId</td>
+           
+                <td>@Model.QuantityPerUnit</td>
+            
+                <td>@String.Format("{0:c}", Model.UnitPrice)</td>
+          
+                <td>@Model.UnitsInStock</td>
+           
+                <td>@Model.UnitsOnOrder</td>
+            
+                <td>@Model.ReorderLevel</td>
+           
+                <td>@Model.Discontinued</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
